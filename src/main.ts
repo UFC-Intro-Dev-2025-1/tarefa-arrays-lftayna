@@ -18,26 +18,33 @@
 const numeros: number[] = [10, 20, 30, 40, 50];
 
 function mostrarArray(array: number[]): void {
-    console.log('--------------------------------');
-    console.log(`Tamanho: `);
-    console.log(`Array: `);
+    console.log('---------------------------');
+    console.log(`Tamanho: `, array.length);
+    console.log(`Array: ` ,array);
 }
 mostrarArray(numeros);
 
+numeros.push(60, 70);
+
+mostrarArray(numeros);
+
+let excluído = numeros.pop();
+mostrarArray(numeros);
 
 
-
-
-const elementoExcluido = ;
+const elementoExcluido = excluído;
 mostrarArray(numeros);
 console.log(`Elemento excluído: ${elementoExcluido}`);
 
-numeros.forEach();
+numeros.forEach(function (item, array) {
+    console.log(item);
+});
 
-const dobrados = numeros.map();
+const dobrados = numeros.map((x) => x * 2);
 mostrarArray(dobrados);
 
-const soma = numeros.reduce();
+const soma = numeros.reduce( (accumulator, currentValue) => accumulator + currentValue
+);
 console.log(`Soma dos elementos do array: ${soma}`);
 
 // para rodar o código, use o comando:
